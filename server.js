@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(cors({
-    origin : 'https://myapp-server-gm8t.onrender.com',
+    origin : '*',
     credentials:true
 }))
 app.get('/',(req,res) => {
