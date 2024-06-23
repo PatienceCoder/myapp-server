@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(cors({
-    origin : 'https://myappclient100.vercel.app',
+    origin : 'https://myappclient100.vercel.app', //replace this with your vercel URL
     credentials:true
 }))
 app.get('/',(req,res) => {
@@ -172,6 +172,6 @@ app.post('/logout',(req,res) => {
 })
 //PORT
 app.listen(port,() => {
-    console.log("Server started");
+    console.log(`Server started on http://localhost:${port} `);
     connectToMongoDB()
 })
